@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Student Dashboard | Abhideepam</title><link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.dashboard-wrap{max-width:1120px;margin:2rem auto;padding:0 1rem}.dash-head{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1.5rem}.dash-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}.dash-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.25rem;box-shadow:0 8px 24px #0f172a0a}.dash-card h3{margin:.25rem 0 .7rem}.dash-card p{color:#64748b}.dash-number{font-size:1.8rem;font-weight:800;color:#174ea6}.dash-section{margin-top:2rem}.dash-table{width:100%;border-collapse:collapse}.dash-table th,.dash-table td{text-align:left;padding:.8rem;border-bottom:1px solid #e5e7eb}.dash-table-wrap{overflow:auto}.notice{padding:1rem;border-radius:12px;background:#eff6ff;color:#1e40af;margin:1rem 0}.error{background:#fff1f2;color:#9f1239}.pill{padding:.25rem .6rem;border-radius:999px;background:#dcfce7;color:#166534;font-size:.8rem}
+</style></head>
+<body>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="logo"><div class="logo-icon">अ</div><div class="logo-text">Abhi<span>deepam</span></div></a><div class="nav-right"><a href="index.html" class="auth-btn">Home</a><button class="auth-btn" id="logoutBtn">Logout</button></div></div></nav>
+<main class="dashboard-wrap"><div class="dash-head"><div><p style="color:#64748b;margin:0">आपका व्यक्तिगत अध्ययन केंद्र</p><h1 style="margin:.3rem 0">Student Dashboard</h1><div id="welcomeText">लोड हो रहा है…</div></div><a href="test-series.html" class="btn btn-primary">Explore Test Series</a></div>
+<div id="statusMessage" class="notice" role="status">Supabase से सुरक्षित कनेक्शन जाँचा जा रहा है…</div>
+<div class="dash-grid"><section class="dash-card"><p>Enrolled Batches</p><div id="batchCount" class="dash-number">—</div><small>आपके सक्रिय बैच</small></section><section class="dash-card"><p>Tests Attempted</p><div id="attemptCount" class="dash-number">—</div><small>आपके सबमिट किए गए टेस्ट</small></section><section class="dash-card"><p>Average Score</p><div id="averageScore" class="dash-number">—</div><small>उपलब्ध टेस्ट परिणामों के आधार पर</small></section><section class="dash-card"><p>Study Material</p><div class="dash-number"><i class="fa-solid fa-book-open"></i></div><a href="study-material.html">अध्ययन सामग्री देखें</a></section></div>
+<section class="dash-section dash-card"><h2><i class="fa-solid fa-graduation-cap"></i> My Batches</h2><div class="dash-table-wrap"><table class="dash-table"><thead><tr><th>Batch</th><th>Status</th><th>Enrollment Date</th></tr></thead><tbody id="batchesBody"><tr><td colspan="3">लोड हो रहा है…</td></tr></tbody></table></div></section>
+<section class="dash-section dash-card"><h2><i class="fa-solid fa-chart-line"></i> My Test History</h2><div class="dash-table-wrap"><table class="dash-table"><thead><tr><th>Test ID</th><th>Status</th><th>Score</th><th>Submitted</th></tr></thead><tbody id="attemptsBody"><tr><td colspan="4">लोड हो रहा है…</td></tr></tbody></table></div><p style="color:#64748b;font-size:.9rem;margin-top:1rem">विषयवार कमजोर/मजबूत क्षेत्र और प्रश्नों के समाधान तब दिखाई देंगे जब टेस्ट जमा करने और मूल्यांकन की सुविधाएँ पूरी तरह सक्रिय होंगी।</p></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/supabase-config.js"></script><script src="js/supabase-client.js"></script><script src="js/student-dashboard.js"></script>
+</body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Abhideepam | Student Account</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">अ</div>
+        <div class="logo-text">Abhi<span>deepam</span></div>
+      </a>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle"><i class="fas fa-globe"></i> हिं</button>
+        <a href="login.html" class="auth-btn">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="auth-page">
+    <div class="auth-card">
+      <div style="text-align:center;margin-bottom:1.5rem">
+        <div class="logo-icon" style="margin:0 auto 1rem;width:52px;height:52px;font-size:1.5rem">अ</div>
+        <h2 data-lang="en">Create Student Account</h2>
+        <h2 data-lang="hi" style="display:none">स्टूडेंट अकाउंट बनाएं</h2>
+        <p class="subtitle" data-lang="en">Register to access paid tests, live classes & premium content</p>
+        <p class="subtitle" data-lang="hi" style="display:none">पेड टेस्ट, लाइव क्लास और प्रीमियम कंटेंट के लिए रजिस्टर करें</p>
+      </div>
+
+      <form data-supabase-auth="register">
+        <div class="form-group"><label>Full Name / पूरा नाम</label><input name="full_name" type="text" required autocomplete="name" placeholder="Aapka poora naam"></div>
+        <div class="form-group"><label>Email</label><input name="email" type="email" required autocomplete="email" placeholder="your@email.com"></div>
+        <div class="form-group"><label>Phone / मोबाइल</label><input name="phone" type="tel" required pattern="[0-9]{10}" placeholder="10 digit number"></div>
+        <div class="form-group"><label>Exam Preparing For</label><select name="exam_preference" required><option value="">Select Exam</option><option>UPSC CSE</option><option>BPSC CCE</option><option>Both UPSC &amp; BPSC</option><option>Other State PSC</option><option>SSC / Banking</option></select></div>
+        <div class="form-group"><label>Password</label><input name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="Minimum 8 characters"></div>
+        <div class="form-group"><label>Confirm Password</label><input name="confirm_password" type="password" required minlength="8" autocomplete="new-password" placeholder="Password dobara likhein"></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.5rem"><i class="fas fa-user-plus"></i> Register Now</button>
+      </form>
+
+      <div class="form-footer">
+        Already have an account? <a href="login.html">Login here</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script><script src="js/supabase-client.js"></script><script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
